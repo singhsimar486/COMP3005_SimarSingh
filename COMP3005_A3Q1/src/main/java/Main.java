@@ -130,7 +130,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter student ID: ");
         int studentId = scanner.nextInt();
-
+        // Using the delete query to delete the chosen student
         String sql = "DELETE FROM students WHERE student_id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1, studentId);
